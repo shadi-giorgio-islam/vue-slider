@@ -13,6 +13,8 @@
     <h1>Benvenuto {{nome}} {{cognome}}</h1>
     <input v-model="nome" placeholder="Inserisci il tuo nome">
     <input v-model="cognome" placeholder="Inserisci il tuo cognome">
+    <button @click='getImage'>{{text}}</button>
+    <img :src="src" :alt="titolo" :class='show'>
   </div>
   <!-- javascript -->
   <script src="js/script.js" charset="utf-8"></script>

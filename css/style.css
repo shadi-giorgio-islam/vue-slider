@@ -3,13 +3,28 @@
   padding: 0;
   box-sizing: border-box;
 }
+body{
+  background-color: #231F20;
+}
 #root{
   text-align: center;
 }
 #root h1{
   padding: 20px 0;
-  font-size: 50px;
+  font-size: 70px;
+  color: #C3B59B;
 }
 #root input{
   padding: 10px 20px;
+}
+#root button{
+  padding: 10px 20px;
+}
+#root img{
+  height: 700px;
+  display: none;
+  margin: auto;
+}
+#root img.active{
+  display: block;
 }
