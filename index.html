@@ -6,15 +6,44 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <script src="https://cdn.jsdelivr.net/npm/vue"></script>
   <link rel="stylesheet" href="css/style.css">
-  <title>Esercizio Vue</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <title>Vue slider</title>
 </head>
 <body>
-  <div id="root">
-    <h1>Benvenuto {{nome}} {{cognome}}</h1>
-    <input v-model="nome" placeholder="Inserisci il tuo nome">
-    <input v-model="cognome" placeholder="Inserisci il tuo cognome">
-    <button @click='getImage'>{{text}}</button>
-    <img :src="src" :alt="titolo" :class='show'>
+  <div class="container">
+    <!-- slider squadra 1 -->
+    <div id="team1">
+      <div class="container">
+        <div class="prev" @click = 'prevTeam'>
+          <a href="#"><i class="fas fa-angle-left fa-5x"></i></a>
+        </div>
+        <div class="teams">
+          <img :src="immagini[counter]" alt="nome[counter]">
+          <h2>{{nome[counter]}}</h2>
+        </div>
+        <div class="next" @click='nextTeam'>
+          <a href="#"><i class="fas fa-angle-right fa-5x"></i></a>
+        </div>
+      </div>
+    </div>
+    <!-- slider squadra 2 -->
+    <div id="team2">
+      <div class="container">
+        <div class="prev" @click = 'prevTeam'>
+          <a href="#"><i class="fas fa-angle-left fa-5x"></i></a>
+        </div>
+        <div class="teams">
+          <img :src="immagini[counter]" alt="nome[counter]">
+          <h2>{{nome[counter]}}</h2>
+        </div>
+        <div class="next" @click='nextTeam'>
+          <a href="#"><i class="fas fa-angle-right fa-5x"></i></a>
+        </div>
+      </div>
+
+    </div>
   </div>
   <!-- javascript -->
   <script src="js/script.js" charset="utf-8"></script>

@@ -1,23 +1,80 @@
 var app = new Vue({
-  el: '#root',
+  el: '#team1',
   data: {
-    nome:'',
-    cognome:'',
-    src: 'https://wallpaperaccess.com/full/4584342.png',
-    titolo: 'Vue',
-    show: '',
-    text: 'Apri immagine'
+    counter: 0,
+    immagini: [
+      'img/inter.png',
+      'img/milan.png',
+      'img/juventus.png',
+      'img/roma.png'
+    ],
+    nome:[
+      'Inter',
+      'Milan',
+      'Juventus',
+      'Roma'
+    ]
   },
   methods: {
-    getImage(){
-      if(this.show == 'active'){
-        this.show = ''
-        this.text = 'Apri immagine'
+    // Squadra successiva
+    nextTeam(){
+      if (this.counter == this.immagini.length - 1) {
+        this.counter = 0;
       }
-      else{
-        this.show = 'active';
-        this.text = 'Chiudi immagine'
+      else {
+        this.counter++;
+      }
+      console.log(this.counter);
+    },
+    prevTeam(){
+
+      if (this.counter < 1) {
+        this.counter = 3;
+      }
+      else {
+        this.counter--;
       }
     }
+
+  }
+})
+var app = new Vue({
+  el: '#team2',
+  data: {
+    counter: 0,
+    immagini: [
+      'img/inter.png',
+      'img/milan.png',
+      'img/juventus.png',
+      'img/roma.png'
+    ],
+    nome:[
+      'Inter',
+      'Milan',
+      'Juventus',
+      'Roma'
+    ]
+  },
+  methods: {
+    // Squadra successiva
+    nextTeam(){
+      if (this.counter == this.immagini.length - 1) {
+        this.counter = 0;
+      }
+      else {
+        this.counter++;
+      }
+      console.log(this.counter);
+    },
+    prevTeam(){
+
+      if (this.counter < 1) {
+        this.counter = 3;
+      }
+      else {
+        this.counter--;
+      }
+    }
+
   }
 })

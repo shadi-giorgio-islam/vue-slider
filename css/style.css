@@ -4,28 +4,36 @@
   box-sizing: border-box;
 }
 body{
-  background-color: #231F20;
+  background-image: url('https://i.pinimg.com/originals/19/1b/6d/191b6d669f008bfaf3950dd3e71ec2ca.jpg');
+  background-repeat: no-repeat;
+  background-size: auto;
+  font-family: 'Roboto', sans-serif;
 }
-#root{
+#team1,
+#team2{
+  display: inline-block;
+  width: 49%;
   text-align: center;
 }
-#root h1{
-  margin-top: 50px;
-  padding: 20px 0;
-  font-size: 70px;
-  color: #C3B59B;
+#team1 .container,
+#team2 .container{
+  height: 100vh;
+  width: 50vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-#root input{
-  padding: 10px 20px;
+.teams img{
+  height: 400px;
 }
-#root button{
-  padding: 10px 20px;
+.teams h2{
+  text-transform: uppercase;
+  font-size: 40px;
+  color: white;
+  padding: 20px;
 }
-#root img{
-  height: 700px;
-  display: none;
-  margin: auto;
-}
-#root img.active{
-  display: block;
+.prev a i,
+.next a i{
+  color: white;
+  padding: 0 20px;
 }
