@@ -1,4 +1,4 @@
-var app = new Vue({
+var squadra1 = new Vue({
   el: '#team1',
   data: {
     counter: 0,
@@ -38,7 +38,7 @@ var app = new Vue({
 
   }
 })
-var app = new Vue({
+var squadra2 = new Vue({
   el: '#team2',
   data: {
     counter: 0,
