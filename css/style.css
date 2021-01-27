@@ -14,11 +14,11 @@ body{
   display: inline-block;
   width: 49%;
   text-align: center;
+  height: 100vh;
+  padding: 15% 0;
 }
 #team1 .container,
 #team2 .container{
-  height: 100vh;
-  width: 50vw;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -36,4 +36,13 @@ body{
 .next a i{
   color: white;
   padding: 0 20px;
+}
+#team1 .fa-circle,
+#team2 .fa-circle{
+  color: white;
+  margin-right: 10px;
+}
+#team1 .fa-circle.active,
+#team2 .fa-circle.active{
+  color: green;
 }

@@ -12,7 +12,6 @@
   <title>Vue slider</title>
 </head>
 <body>
-  <div class="container">
     <!-- slider squadra 1 -->
     <div id="team1">
       <div class="container">
@@ -26,6 +25,9 @@
         <div class="next" @click='nextTeam'>
           <a href="#"><i class="fas fa-angle-right fa-5x"></i></a>
         </div>
+      </div>
+      <div class="nav">
+        <i class="fas fa-circle  fa-lg" v-for='(immagine, index) in immagini' :class="(index == counter) ? 'active' : ''" @click='cambiaImg(index)'></i>
       </div>
     </div>
     <!-- slider squadra 2 -->
@@ -42,9 +44,10 @@
           <a href="#"><i class="fas fa-angle-right fa-5x"></i></a>
         </div>
       </div>
-
+      <div class="nav">
+        <i class="fas fa-circle fa-lg" v-for='(immagine, index) in immagini' :class="(index == counter) ? 'active' : ''" @click='cambiaImg(index)'></i>
+      </div>
     </div>
-  </div>
   <!-- javascript -->
   <script src="js/script.js" charset="utf-8"></script>
 </body>

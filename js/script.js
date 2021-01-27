@@ -34,8 +34,10 @@ var squadra1 = new Vue({
       else {
         this.counter--;
       }
+    },
+    cambiaImg(indice){
+      this.counter = indice;
     }
-
   }
 })
 var squadra2 = new Vue({
@@ -74,6 +76,9 @@ var squadra2 = new Vue({
       else {
         this.counter--;
       }
+    },
+    cambiaImg(indice){
+      this.counter = indice;
     }
 
   }
